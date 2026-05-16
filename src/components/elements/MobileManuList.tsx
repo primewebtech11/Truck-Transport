@@ -1,32 +1,35 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router';
-import { motion } from "framer-motion"
-import useTransportContext from '../context/useTransportContext';
+// import { Link, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
+// import { motion } from "framer-motion"
+// import useTransportContext from '../context/useTransportContext';
 import type { MenuItem } from '../../contents/navmenu/navType';
-import { blogList, homeList, pagesList, servicesList, shopList } from '../../contents/navmenu/navItem';
+// import { blogList, homeList, pagesList, servicesList, shopList } from '../../contents/navmenu/navItem';
+import {  homeList,  } from '../../contents/navmenu/navItem';
 
 const MobileManuList: React.FC = () => {
 
-    const { setIsMobileManu } = useTransportContext();
-    const [isHome, setIsHome] = useState<boolean>(false);
-    const [isPages, setIsPages] = useState<boolean>(false);
-    const [isServices, setIsServices] = useState<boolean>(false);
-    const [isShop, setIsShop] = useState<boolean>(false);
-    const [isBlog, setIsBlog] = useState<boolean>(false);
+    // const { setIsMobileManu } = useTransportContext();
+    const [isHome] = useState<boolean>(false);
+    // const [isHome, setIsHome] = useState<boolean>(false);
+    // const [isPages, setIsPages] = useState<boolean>(false);
+    // const [isServices, setIsServices] = useState<boolean>(false);
+    // const [isShop, setIsShop] = useState<boolean>(false);
+    // const [isBlog, setIsBlog] = useState<boolean>(false);
     const currentPath = useLocation().pathname;
     const findLocation = (array: MenuItem[]): boolean => {
         return array.some(item => item?.url === currentPath);
     };
 
 
-    const closeMobileManu = () => {
-        setIsMobileManu(false)
-        setIsHome(false)
-        setIsPages(false)
-        setIsServices(false)
-        setIsShop(false)
-        setIsBlog(false)
-    }
+    // const closeMobileManu = () => {
+    //     setIsMobileManu(false)
+    //     setIsHome(false)
+    //     setIsPages(false)
+    //     setIsServices(false)
+    //     setIsShop(false)
+    //     setIsBlog(false)
+    // }
 
 
     return (
