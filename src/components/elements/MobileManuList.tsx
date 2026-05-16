@@ -35,9 +35,9 @@ const MobileManuList: React.FC = () => {
             <li className="dropdown">
                 <a href="#" className={`${isHome || findLocation(homeList) ? "expanded" : ""}`}>
                     Home
-                    <button className={`${isHome ? "expanded" : ""}`} onClick={() => setIsHome((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button>
+                    {/* <button className={`${isHome ? "expanded" : ""}`} onClick={() => setIsHome((pre) => (!pre))} > <i className="fa fa-angle-down"></i></button> */}
                 </a>
-                <ul className="shadow-box" style={{ display: `${isHome ? "block" : "none"}` }}>
+                {/* <ul className="shadow-box" style={{ display: `${isHome ? "block" : "none"}` }}>
                     {
                         homeList.map((Item: MenuItem) => (
                             <motion.li
@@ -54,9 +54,9 @@ const MobileManuList: React.FC = () => {
                             </motion.li>
                         ))
                     }
-                </ul>
+                </ul> */}
             </li>
-            <li className={`${currentPath === "/about" ? "current" : ""}`} onClick={closeMobileManu}>
+            {/* <li className={`${currentPath === "/about" ? "current" : ""}`} onClick={closeMobileManu}>
                 <Link to="/about">About Us</Link>
             </li>
             <li className="dropdown">
@@ -158,7 +158,7 @@ const MobileManuList: React.FC = () => {
             </li>
             <li className={`${currentPath === "/contact" ? "current" : ""}`} onClick={closeMobileManu}>
                 <Link to="/contact">Contact</Link>
-            </li>
+            </li> */}
         </ul>
 
 
