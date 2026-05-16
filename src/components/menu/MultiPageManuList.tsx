@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
 import type { MenuItem } from '../../contents/navmenu/navType';
-import { blogList, homeList, pagesList, servicesList, shopList } from '../../contents/navmenu/navItem';
+// import { blogList, homeList, pagesList, servicesList, shopList } from '../../contents/navmenu/navItem';
+import {  homeList } from '../../contents/navmenu/navItem';
 
 const MultiPageManuList: React.FC = () => {
     const currentPath = useLocation().pathname;
